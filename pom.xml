@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>___GROUP_ID___</groupId>
-	<artifactId>___ARTIFACT_ID___</artifactId>
-	<version>___VERSION___</version>
+	<groupId>org.zkoss.theme</groupId>
+	<artifactId>ecds</artifactId>
+	<version>8.6.0</version>
 	<properties>
 		<zk.version>8.0.2.1-Eval</zk.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}</packname>
 	</properties>
 	<packaging>jar</packaging>
-	<name>___ARTIFACT_ID___</name>
+	<name>ecds</name>
 	<scm>
 		<url>http://mavensync.zkoss.org/maven2</url>
 	</scm>
-	<description>___DISPLAY_NAME___</description>
+	<description>ECDS theme</description>
 	<licenses>
 		<license>
 			<name>GNU LESSER GENERAL PUBLIC LICENSE, Version 3</name>
