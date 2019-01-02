@@ -63,9 +63,7 @@
 		background: @meshBackgroundColor;
 	}
 
-	&-odd > .z-listcell {
-		background: @meshStripeBackgroundColor;
-	}
+	 
 	// ZK-3138: ROD loading indicator
 	&-loading {
 		background: transparent no-repeat center;
@@ -164,7 +162,8 @@
 	}
 	//list cell
 	.z-listcell {
-		border-right: 1px solid @meshContentBorderColor;
+		border-left: 1px solid @ecdsLightBorderColor;
+		border-bottom: 1px solid @ecdsLightBorderColor;
 		overflow: hidden;
 		cursor: pointer;
 		position: relative;

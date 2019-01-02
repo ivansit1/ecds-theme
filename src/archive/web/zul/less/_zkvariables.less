@@ -1,4 +1,17 @@
 // Global Variables
+
+// ------------------------------------
+// ECDS
+// ------------------------------------
+@ecdsLightBorderColor:			#f2f2f2;
+@ecdsListboxHighlistColor:		#b5d3e4;
+@ecdsHighlightColor:			#ffef34;
+@inputBorderRadius:             @baseBorderRadius;
+@checkboxHoverBorderColor:      @primaryColor;
+@inputDisableColor:  			white;
+@inputDisableBackgroundColor:   @iconDisabledColor; 
+@primaryColor:   				#438EB9; 
+
 // -------------------------------------
 // Typography
 // -------------------------------------
@@ -41,9 +54,9 @@
 // -------------------------------------
 // Font color
 @baseTextColor:                #000000;
-@textColorGray:                #555555;
-@textColorGrayDark:            #363636;
-@textColorGrayLight:           #636363;
+@textColorGray:                #000000;
+@textColorGrayDark:            #000000;
+@textColorGrayLight:           #000000;
 @textColorBlue:                #2184BA;
 @textColorGreen:               #46A546;
 @textColorOrange:              #F7941D;
@@ -61,8 +74,8 @@
 // -------------------------------------
 // Icon font color (used for font-awesome)
 // -------------------------------------
-@iconColor:                    #636363;
-@iconHoverColor:               #636363;
+@iconColor:                    @baseTextColor;
+@iconHoverColor:               @baseTextColor;
 @iconDisabledColor:            #AAAAAA;
 
 // -------------------------------------
@@ -88,8 +101,8 @@
 @meshFootBackgroundColor:      #FAFAFA;
 @meshTitleHoverStart:          #F2F9FE;
 @meshTitleHoverEnd:            #D6F0FD;
-@meshContentHoverStart:        #FFFFFF;
-@meshContentHoverEnd:          #E4E4E4;
+@meshContentHoverStart:        @ecdsListboxHighlistColor;
+@meshContentHoverEnd:          @ecdsListboxHighlistColor;
 @meshContentFocusStart:        #FCFEFE;
 @meshContentFocusEnd:          #E4F2FC;
 @meshAutoPagingRowHeight:      32px;
@@ -119,9 +132,11 @@
 @hoverGradientEnd:             #E4E4E4;
 
 // Disabled
-@disabledColor:                #AAAAAA;
+@disabledColor:                #000000;
 @disabledBackgroundColor:      #F0F0F0;
 @disabledOpacity:              0.6;
+@disabledOpacityLow:           0.3;
+@disabledOpacityHigh:          1;
 
 // Invalid
 @invalidBorderColor:           #DD7777;
@@ -131,32 +146,32 @@
 @readonlyBackgroundColor:      #FAFAFA;
 
 // Selected (used on listbox, tree, comboitem)
-@selectedColor:                @textColorGrayLight;
-@selectedBorderColor:          @baseBorderColor;
-@selectedBackgroundColor:      #BEE7FC;
-@selectedGradientStart:        #E5F4FB;
-@selectedGradientEnd:          #D3EDFA;
+@selectedColor:                @baseTextColor;
+@selectedBorderColor:          @ecdsHighlightColor;
+@selectedBackgroundColor:      @ecdsHighlightColor;
+@selectedGradientStart:        @ecdsHighlightColor;
+@selectedGradientEnd:          @ecdsHighlightColor;
 
 // Selected Hover (used on listbox, tree, comboitem)
-@selectedHoverColor:           @textColorGrayLight;
-@selectedHoverBorderColor:     @baseBorderColor;
-@selectedHoverBackgroundColor: #C5E7F8;
-@selectedHoverGradientStart:   #D5E4EA;
-@selectedHoverGradientEnd:     #B7D2E2;
+@selectedHoverColor:           @baseTextColor;
+@selectedHoverBorderColor:     @ecdsHighlightColor;
+@selectedHoverBackgroundColor: @ecdsHighlightColor;
+@selectedHoverGradientStart:   @ecdsHighlightColor;
+@selectedHoverGradientEnd:     @ecdsHighlightColor;
 
 // Selected Focus (used on listbox, tree, comboitem)
-@selectedFocusColor:           @textColorGrayLight;
-@selectedFocusBorderColor:     #8FB9D0;
-@selectedFocusBackgroundColor: #D6F0FD;
-@selectedFocusGradientStart:   #CFEAF7;
-@selectedFocusGradientEnd:     #A5D9F4;
+@selectedFocusColor:           @baseTextColor;
+@selectedFocusBorderColor:     @ecdsHighlightColor;
+@selectedFocusBackgroundColor: @ecdsHighlightColor;
+@selectedFocusGradientStart:   @ecdsHighlightColor;
+@selectedFocusGradientEnd:     @ecdsHighlightColor;
 
 // Checked (used on menuitem, listbox, tree, toolbarbutton)
-@checkedColor:                 #2184BA;
+@checkedColor:                 @primaryColor;
 @checkedBorderColor:           #8E8F8F;
 @checkedBackgroundColor:       #F8F8F8;
-@checkedGradientStart:         #F4FAFD;
-@checkedGradientEnd:           #E2EFF6;
+@checkedGradientStart:         @primaryColor;
+@checkedGradientEnd:           @primaryColor;
 
 // Collapsed (used on Borderlayout)
 @collapsedBorderColor:         @baseBorderColor;
@@ -195,8 +210,8 @@
 @calendarTitleColor:           @textColorGrayLight;
 @calendarTitleHoverColor:      @textColorGrayLight;
 @calendarCellColor:            @textColorGrayLight;
-@calendarSelectedColor:        #008BB6;
-@calendarSelectedHoverColor:   #008BB6;
+@calendarSelectedColor:        @baseTextColor;
+@calendarSelectedHoverColor:   @baseTextColor;
 @weekendColor:                 @textColorOrange;
 @weekendBackgroundColor:       #F2F2F2;
 @weekColor:                    @textColorGrayLight;

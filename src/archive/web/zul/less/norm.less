@@ -174,9 +174,64 @@ input[type="radio"] {
 
 //checkbox
 input[type="checkbox"] {
-	-webkit-appearance: checkbox;
-	-moz-appearance: checkbox;
-	margin: 0px 2px 2px;
+	.baseIconFont();
+	font-size: 16px;
+	margin: 0 4px 2px 8px;
+	background: @inputBackgroundColor;
+	border: 1px solid @inputBorderColor;
+	.borderRadius(@inputBorderRadius);
+	.size(18px, 18px);
+	&:hover {
+		border-color: @checkboxHoverBorderColor;
+	}
+
+	&:checked {
+		background-color: @checkedColor;
+		color: @checkedBackgroundColor;
+		&:before {
+			content: "\f00c";
+		}
+	}
+
+	&[disabled] {
+		cursor: default;
+		color: @inputDisableColor;
+		background-color: @inputDisableBackgroundColor;
+		&:hover {
+			border-color: @inputBorderColor;
+		}
+	}
+
+	&:indeterminate {
+		background-color: @checkedColor;
+		color: @checkedBackgroundColor;
+		&:before {
+			content: "\f068";
+		}
+	}
+
+	&::-ms-check {
+		border: 0;
+		.borderRadius(@inputBorderRadius);
+	}
+
+	&:checked::-ms-check {
+		border: 0;
+		background-clip: content-box;
+		background-color: @checkedColor;
+		color: @checkedBackgroundColor;
+	}
+
+	&[disabled]:checked::-ms-check {
+		background-color: @inputDisableBackgroundColor;
+		color: @inputDisableColor;
+	}
+}
+
+.ie11 {
+	input[type="checkbox"]::-ms-check {
+		border: 1px solid @checkedBorderColor;
+	}
 }
 
 //label
