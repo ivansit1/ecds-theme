@@ -74,7 +74,7 @@
 	z-index: 1;
 }
 // remove selected tab bottom border
-.z-tabbox-top > .z-tabs .z-tab:first-child {
+.z-tabbox-top > .z-tabs {
 	&.z-tab-selected {
 		.boxShadow(1px 1px 0 #FFFFFF);
 	}
@@ -83,7 +83,7 @@
 	}
 }
 // remove selected tab top border
-.z-tabbox-bottom > .z-tabs .z-tab:first-child {
+.z-tabbox-bottom > .z-tabs{
 	&.z-tab-selected {
 		.boxShadow(1px -1px 0 #FFFFFF);
 	}
@@ -92,7 +92,7 @@
 	}
 }
 // remove selected tab right border
-.z-tabbox-left > .z-tabs .z-tab:first-child {
+.z-tabbox-left > .z-tabs{
 	&.z-tab-selected {
 		.boxShadow(1px 1px 0 #FFFFFF);
 	}
@@ -102,7 +102,7 @@
 	}
 }
 // remove selected tab left border
-.z-tabbox-right > .z-tabs .z-tab:first-child {
+.z-tabbox-right > .z-tabs{
 	border-left: 0px;
 	&.z-tab-selected {
 		.boxShadow(-1px 1px 0 #FFFFFF);
@@ -345,29 +345,31 @@
 	margin: 0;
 	padding-top: 1px;
 	line-height: @baseButtonHeight + 6;
-	.verGradient(@baseGradientStart, @baseGradientEnd);
+	background-color:@meshStripeBackgroundColor;
 	text-align: center;
 	position: relative;
 	cursor: pointer;
-	float: left;
-	
+	float: left; 
 
 	&-content {
 		display: block;
 	}
 
 	&:hover {
-		.verGradient(@hoverGradientStart, @hoverGradientEnd);
+		background-color:@meshStripeBackgroundColor;
 	}
 
 	&-icon {
-		display: block;
-		margin-top: -6px;
-		line-height: normal;
-		position: absolute;
+		display: block; 
+		margin-left: 8px;
+		line-height: normal; 
 		top: 50%;
-		left: 5px;
-		cursor: pointer;
+		left: 1px;
+		cursor: pointer; 
+		font-size:14px;
+		&:hover {
+			color: red;
+		}
 	}
 
 	&-text {
@@ -411,6 +413,7 @@
 	&-selected {
 		.resetGradient();
 		background: @tabSelectedBackgroundColor;
+		border-top: 2px solid @primaryColor;
 		.boxShadow('0 1px 0 #FFFFFF');
 		&:hover {
 			.resetGradient();
@@ -422,6 +425,13 @@
 		.z-tab-text {
 			cursor: default;
 			font-weight: bold;
+			color: @primaryColor;
+		} 
+		.z-tab-icon {
+			color: @primaryColor;
+			&:hover {
+				color: red;
+			}
 		}
 	}
 	&-disabled {

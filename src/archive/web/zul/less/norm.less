@@ -165,20 +165,6 @@ div.z-log {
 	}
 }
 
-select {
-	height: 20px;
-} 
-
-select:disabled {
-	background-color: rgb(235, 235, 228);
-	cursor: default;
-	border: 1px solid #cfcfcf;
-} 
-
-select:disabled::-ms-value {
-    color: @ecdsBlackColor;
-}
-
 //radio, radiogroup
 input[type="radio"] {
 	-webkit-appearance: radio;
@@ -190,7 +176,7 @@ input[type="radio"] {
 input[type="checkbox"] {
 	.baseIconFont();
 	font-size: 16px;
-	margin: 4px;
+	margin: 0 4px 2px 8px;
 	background: @inputBackgroundColor;
 	border: 1px solid @inputBorderColor;
 	.borderRadius(@inputBorderRadius);
@@ -782,3 +768,5 @@ span.z-upload input {
 	display: inline-block;
 	min-width: 1px;
 }
+
+body{padding:0 0px;}
