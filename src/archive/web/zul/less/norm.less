@@ -165,6 +165,20 @@ div.z-log {
 	}
 }
 
+select {
+	height: 20px;
+} 
+
+select:disabled {
+	background-color: rgb(235, 235, 228);
+	cursor: default;
+	border: 1px solid #cfcfcf;
+} 
+
+select:disabled::-ms-value {
+    color: @ecdsBlackColor;
+}
+
 //radio, radiogroup
 input[type="radio"] {
 	-webkit-appearance: radio;
@@ -176,7 +190,7 @@ input[type="radio"] {
 input[type="checkbox"] {
 	.baseIconFont();
 	font-size: 16px;
-	margin: 0 4px 2px 8px;
+	margin: 4px;
 	background: @inputBackgroundColor;
 	border: 1px solid @inputBorderColor;
 	.borderRadius(@inputBorderRadius);

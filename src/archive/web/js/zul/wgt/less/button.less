@@ -1,34 +1,33 @@
 @import "~./zul/less/_header.less";
 
 .z-button {
-	.fontStyle(@baseTitleFontFamily, @fontSizeMedium, normal, @baseTextColor);
+	.fontStyle(@baseTitleFontFamily, @fontSizeMedium, normal, @ecdsWhiteColor);
 	min-height: @baseButtonHeight;
 	border: 1px solid @buttonBorderColor;
 	.borderRadius(@baseBorderRadius);
-	padding: 3px 12px;
+	padding: 3px 8px;
 	line-height: @baseLineHeight;
-	.verGradient(@buttonGradientStart, @buttonGradientEnd);
-	text-shadow: 0 1px #FFFFFF;
+	background-color: @primaryColor;
 	cursor: pointer;
 	white-space: nowrap;
+	margin-right: 4px;
 
 	&:hover {
-		border-color: @hoverBorderColor;
-		.verGradient(@hoverGradientStart, @hoverGradientEnd);
+		border-color: @ecdsButtonHover; 
+		background-color: @ecdsButtonHover;
 	}
-	&:focus {
-		color: @focusColor;
-		border-color: @focusBorderColor;
-		.verGradient(@focusGradientStart, @focusGradientEnd);
+	&:focus { 
+		border-color: @ecdsButtonHover;
+		background-color: @primaryColor;
 		.boxShadow('inset 0 0 2px #0CBCFF');
 	}
 	&:active {
-		border-color: @activeBorderColor;
-		.verGradient(@activeGradientStart, @activeGradientEnd);
+		border-color: @ecdsButtonActive; 
+		background-color: @ecdsButtonActive;
 	}
 	&[disabled] {
 		border-color: @buttonBorderColor;
-		.verGradient(@buttonGradientStart, @buttonGradientEnd);
+		background-color: @primaryColor;
 		.opacity(@disabledOpacityLow);
 		.boxShadow('none');
 		cursor: default;
@@ -43,16 +42,16 @@
 		min-height: @baseButtonHeight - 8; //minus padding border height
 		.gradientFallback(@buttonGradientStart, @buttonGradientEnd);
 		&:hover {
-			.gradientFallback(@hoverGradientStart, @hoverGradientEnd);
+			background-color: @ecdsButtonHover;
 		}
 		&:focus {
-			.gradientFallback(@focusGradientStart, @focusGradientEnd);
+			background-color: @primaryColor;
 		}
 		&:active {
-			.gradientFallback(@activeGradientStart, @activeGradientEnd);
+			background-color: @ecdsButtonActive;
 		}
 		&[disabled] {
-			.gradientFallback(@buttonGradientStart, @buttonGradientEnd);
+			background-color: @primaryColor;
 		}
 	}
 }
