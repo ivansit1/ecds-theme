@@ -75,7 +75,8 @@
 }
 
 .z-notification-pointer ~ .z-notification-content {
-	.displaySize(table-cell, 125px, 60px);
+	.displaySize(table-cell, 200px, 60px);
+	min-width: 125px; // fix for IE9
 	min-height: 60px; // fix for IE9
 	.borderRadius(5px);
 	padding: 5px 18px 5px 45px;

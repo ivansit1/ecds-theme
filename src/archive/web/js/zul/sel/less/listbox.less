@@ -114,9 +114,10 @@
 	}
 	&-checkable {
 		.displaySize(inline-block, @baseIconWidth, @baseIconHeight);
-		border: 1px solid @checkedBorderColor;
-		background: @checkedBackgroundColor;
+		background: @inputBackgroundColor;
+		border: 1px solid @inputBorderColor;
 		vertical-align: text-top;
+		.borderRadius(@inputBorderRadius);
 		
 		.z-listheader-icon {
 			display: none;
@@ -183,9 +184,10 @@
 	//check mark
 	&-checkable {
 		.displaySize(inline-block, @baseIconWidth, @baseIconHeight);
-		border: 1px solid @checkedBorderColor;
+		border: 1px solid @inputBorderColor;
 		background: @checkedBackgroundColor;
 		vertical-align: text-top;
+		.borderRadius(@inputBorderRadius);
 		
 		&.z-listitem-radio {
 			.borderRadius(@baseIconWidth / 2);
@@ -313,9 +315,9 @@ body:not(.gecko) {
 	//check mark
 	&-checkable {
 		.displaySize(inline-block, @baseIconWidth, @baseIconHeight);
-		border: 1px solid @checkedBorderColor;
+		border: 1px solid @baseBorderColor;
 		margin-right: 2px;
-		background: @checkedBackgroundColor;
+		background: @inputBorderColor;
 		vertical-align: text-top;
 		
 		.z-listgroup-icon {

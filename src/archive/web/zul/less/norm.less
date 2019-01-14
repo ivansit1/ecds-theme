@@ -176,7 +176,7 @@ input[type="radio"] {
 input[type="checkbox"] {
 	.baseIconFont();
 	font-size: 16px;
-	margin: 0 4px 2px 8px;
+	margin: 4px;
 	background: @inputBackgroundColor;
 	border: 1px solid @inputBorderColor;
 	.borderRadius(@inputBorderRadius);
@@ -187,9 +187,13 @@ input[type="checkbox"] {
 
 	&:checked {
 		background-color: @checkedColor;
+		border: 1px solid @checkedColor;
 		color: @checkedBackgroundColor;
 		&:before {
 			content: "\f00c";
+		}
+		&:hover {
+		background-color: @ecdsButtonHover;
 		}
 	}
 
@@ -598,9 +602,25 @@ span.z-upload input {
 }
 
 //Selectbox
-.z-selectbox {
+.z-selectbox {    
 	font-family: @baseContentFontFamily;
 	font-size: @fontSizeMedium;
+} 
+
+select {
+	height: 20px;
+	.borderRadius(3px);
+	border: 1px solid #cfcfcf;
+} 
+
+select:disabled {
+	background-color: rgb(235, 235, 228);
+	cursor: default;
+	border: 1px solid #cfcfcf;
+} 
+
+select:disabled::-ms-value {
+    color: @ecdsBlackColor;
 }
 
 //scrollbar
@@ -769,4 +789,6 @@ span.z-upload input {
 	min-width: 1px;
 }
 
-body{padding:0 0px;}
+body{
+	padding:0 0px;
+} 
