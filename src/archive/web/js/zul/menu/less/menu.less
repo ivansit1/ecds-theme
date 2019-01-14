@@ -1,13 +1,13 @@
 @import "~./zul/less/_header.less";
 
 .hoverStyle() {
-	border-color: @hoverBorderColor;
-	.verGradient(@hoverGradientStart, @hoverGradientEnd);
+	border-color: @ecdsMenuHoverColor;
+	background-color: @ecdsMenuHoverColor; 
 }
 .activeStyle() {
-	border-color: @menuActiveBorderColorTR @menuActiveBorderColorBL @menuActiveBorderColorBL @menuActiveBorderColorTR;
-	.verGradient(@baseGradientStart, @baseGradientEnd);
-	.boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75)');
+	border-color: @ecdsMenuHoverColor;
+	background-color: @ecdsMenuHoverColor;
+	color: @ecdsMenuHoverFontColor; 
 }
 .restUl() {
 	background: transparent none repeat 0 0;
@@ -23,10 +23,7 @@
 // define common font property
 .z-menubar {
 	display: block;
-	border-top: 1px solid @baseBorderColor;
-	border-bottom: 1px solid @baseBorderColor;
-	padding: 3px 0;
-	.verGradient(@baseGradientStart, @baseGradientEnd);
+	background-color: @ecdsMenuBackgroundColor;
 	position: relative;
 
 	ul {
@@ -40,8 +37,7 @@
 	}
 
 	&-horizontal {
-		li {
-			margin: 0 2px;
+		li { 
 			float: left;
 		}
 		.z-menuseparator {
@@ -87,6 +83,7 @@
 	&-text {
 		font-family: @baseTitleFontFamily;
 		font-size: @fontSizeMedium;
+		padding-left:3px;
 		font-weight: normal;
 		display: inline-block;
 		line-height: @baseIconHeight;
@@ -105,10 +102,9 @@
 		margin-right: 3px;
 	}
 	&-content {
-		color: @textColorGray;
+		color: @ecdsMenuColor;
 		display: block;
-		border: 1px solid transparent;
-		.borderRadius(@baseBorderRadius);
+		border: 1px solid transparent; 
 		padding: 3px 6px 3px;
 		line-height: @baseLineHeight - 2;
 		position: relative;
@@ -213,8 +209,7 @@
 	z-index: @basePopupZIndex;
 }
 .z-menupopup {
-	border: 1px solid @baseBorderColor;
-	padding: 3px;
+	border: 1px solid @baseBorderColor; 
 	background: @menuPopupBackground;
 	left: 0;
 	top: 0;
@@ -365,3 +360,11 @@
 		}
 	}
 }
+
+.override-menu-icon > .z-menu-content > .z-icon-caret-down:before {
+    content:none !important;
+ }
+ 
+ .override-menubar-icon > ul > .z-menu > .z-menu-content > .z-icon-caret-down:before {
+    content:none !important;
+ }
