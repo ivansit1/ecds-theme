@@ -356,7 +356,7 @@
 	}
 
 	&:hover {
-		background-color:@meshStripeBackgroundColor;
+		background-color:@meshStripeBackgroundColor; 
 	}
 
 	&-icon {
@@ -373,8 +373,11 @@
 	}
 
 	&-text {
+		&:hover {
+			color:@primaryColor;
+		}
 		font-style: normal;
-		color: @textColorGray;
+		color: @ecdsMenuColor;
 		display: block;
 		padding: 4px 12px 2px;
 		line-height: @baseButtonHeight;

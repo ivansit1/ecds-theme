@@ -40,11 +40,13 @@
 		li { 
 			float: left;
 		}
-		.z-menuseparator {
+		.z-menuseparator { 
+
 			display: block;
 			width: 1px;
-			border-left: 1px solid @menuSeparatorBorderColor;
-			line-height: @baseButtonHeight;
+			
+			border-left: 1px solid @menuPopupSeparatorBackground; 
+			line-height: @baseButtonHeight + 5px;
 		}
 	}
 	&-vertical {
@@ -60,7 +62,7 @@
 		.z-menuseparator {
 			height: 0;
 			min-height: 0;
-			border-top: 1px solid @menuSeparatorBorderColor;
+			border-top: 1px solid @menuPopupSeparatorBackground;
 			line-height: 0;
 		}
 		.z-menu {
@@ -105,7 +107,7 @@
 		color: @ecdsMenuColor;
 		display: block;
 		border: 1px solid transparent; 
-		padding: 3px 6px 3px;
+		padding: 5px 8px 5px;
 		line-height: @baseLineHeight - 2;
 		position: relative;
 		cursor: pointer;
@@ -248,7 +250,7 @@
 	}
 	.z-menu-icon {
 		position: absolute;
-		top: 5px;
+		top: 7px;
 		right: 5px;
 	}
 	.z-menuseparator {
