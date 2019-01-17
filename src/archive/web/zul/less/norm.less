@@ -165,11 +165,70 @@ div.z-log {
 	}
 }
 
-//radio, radiogroup
 input[type="radio"] {
-	-webkit-appearance: radio;
-	-moz-appearance: radio;
-	margin: 0px 2px 2px;
+	margin: 0 4px 2px 8px;
+	background: @inputBackgroundColor;
+	border: 1px solid @inputBorderColor;
+	.borderRadius(50%);
+	.size(20px, 20px);
+	&:hover {
+		border-color: @checkboxHoverBorderColor;
+	}
+
+	&:before {
+		content: '';
+		.displaySize(block, 12px, 12px);
+		.borderRadius(50%);
+		position: relative;
+		top: 50%;
+		left: 50%;
+		.transform('translate(-50%, -50%)');
+	}
+
+	&:checked {
+		border-color: @checkedColor;
+		&:before {
+			background-color: @checkedColor;
+		}
+	}
+
+	&[disabled] {
+		cursor: default;
+		background-color: @inputDisableBackgroundColor;
+		&:checked {
+			border-color: @inputDisableColor;
+			&:before {
+				background-color: @inputDisableColor;
+			}
+			&:hover {
+				border-color: @inputDisableColor;
+			}
+		}
+		&:hover {
+			border-color: @inputBorderColor;
+		}
+	}
+
+	&::-ms-check {
+		border: 0;
+	}
+
+	&:checked::-ms-check {
+		border-color: @checkedBorderColor;
+		color: @checkedColor;
+	}
+
+	&[disabled]:checked::-ms-check {
+		border-color: @inputDisableColor;
+		color: @inputDisableColor;
+		border-radius: 50%;
+	}
+}
+
+.ie11 {
+	input[type="radio"]::-ms-check {
+		border: 1px solid @checkedBorderColor;
+	}
 }
 
 //checkbox
@@ -186,15 +245,12 @@ input[type="checkbox"] {
 	}
 
 	&:checked {
-		background-color: @checkedColor;
-		border: 1px solid @checkedColor;
-		color: @checkedBackgroundColor;
+		background-color: @checkedBackgroundColor;
+		border: 1px solid @checkedBorderColor;
+		color: @checkedColor;
 		&:before {
 			content: "\f00c";
-		}
-		&:hover {
-		background-color: @ecdsButtonHover;
-		}
+		} 
 	}
 
 	&[disabled] {
@@ -207,8 +263,8 @@ input[type="checkbox"] {
 	}
 
 	&:indeterminate {
-		background-color: @checkedColor;
-		color: @checkedBackgroundColor;
+		background-color: @checkedBackgroundColor;
+		color: @checkedColor;
 		&:before {
 			content: "\f068";
 		}
@@ -222,8 +278,8 @@ input[type="checkbox"] {
 	&:checked::-ms-check {
 		border: 0;
 		background-clip: content-box;
-		background-color: @checkedColor;
-		color: @checkedBackgroundColor;
+		background-color: @checkedBackgroundColor;
+		color: @checkedColor;
 	}
 
 	&[disabled]:checked::-ms-check {

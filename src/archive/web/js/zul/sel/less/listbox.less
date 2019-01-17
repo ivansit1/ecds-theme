@@ -89,14 +89,14 @@
 	border-right: 1px solid @meshTitleBorderColor;
 	border-bottom: 1px solid @meshTitleBorderColor;
 	padding: 0;
-	.verGradient(@baseGradientStart, @baseGradientEnd);
+	.verGradient(@ecdsListboxHeader, @ecdsListboxHeader);
 	background-clip: padding-box;
 	position: relative;
 	overflow: hidden;
 	white-space: nowrap;
 	
 	&-hover {
-		.verGradient(@meshTitleHoverStart, @meshTitleHoverEnd);
+		.verGradient(@ecdsListboxHeader, @ecdsListboxHeader);
 	}
 	&-sort {
 		.z-listheader-content {
@@ -369,6 +369,7 @@ body:not(.gecko) {
 	overflow: hidden;
 }
 .z-listheader-content {
+	.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @ecdsWhiteColor);
 	font-weight: bold;
 	padding: 4px 5px 3px;
 	position: relative;

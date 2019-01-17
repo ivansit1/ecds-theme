@@ -14,12 +14,15 @@
 @secondaryColor:				#636363;
 @ecdsBlackColor:				#2d2b2b;
 @ecdsWhiteColor:				white;
-@ecdsButtonHover:				#43acb9;
+@ecdsButtonHover:				#5a91ee;
 @ecdsButtonActive:				#4371b9;
 @ecdsMenuColor:					#686F7A;
 @ecdsMenuBackgroundColor:		#F7F8FA;
 @ecdsMenuHoverColor:			#E8E9EB;
 @ecdsMenuHoverFontColor:		#14171C;
+@ecdsListboxHeader:				#438EB9;
+@ecdsSelectedColor:			   #4885ed;
+@buttonColor:				   @ecdsSelectedColor;
 
 // -------------------------------------
 // Typography
@@ -90,9 +93,9 @@
 // -------------------------------------
 // Button (used for button, combobutton)
 // -------------------------------------
-@buttonBorderColor:            @primaryColor;
-@buttonGradientStart:          @primaryColor;
-@buttonGradientEnd:            @primaryColor;
+@buttonBorderColor:            @buttonColor;
+@buttonGradientStart:          @buttonColor;
+@buttonGradientEnd:            @buttonColor;
 
 // -------------------------------------
 // Input (used for textbox, intbox, spinner, ...)
@@ -176,7 +179,7 @@
 @selectedFocusGradientEnd:     @ecdsHighlightColor;
 
 // Checked (used on menuitem, listbox, tree, toolbarbutton)
-@checkedColor:                 @primaryColor;
+@checkedColor:                 @ecdsSelectedColor;
 @checkedBorderColor:           #8E8F8F;
 @checkedBackgroundColor:       #F8F8F8;
 @checkedGradientStart:         @primaryColor;

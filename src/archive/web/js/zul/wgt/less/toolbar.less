@@ -114,11 +114,11 @@
 
 	&:hover {
 		border-color: @hoverBorderColor;
-		.verGradient(@hoverGradientStart, @hoverGradientEnd);
+		background: white;
 	}
 	&:active {
 		border: 1px solid @activeBorderColor;
-		.verGradient(@activeGradientStart, @activeGradientEnd);
+		background: white;
 		.boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75), 0 0 7px #CFCFCF');
 	}
 	&[disabled] {
