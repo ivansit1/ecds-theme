@@ -337,11 +337,7 @@ input[type="checkbox"] {
 
 .z-loading,
 .z-apply-loading {
-	border: 1px solid @baseBorderColor;
-	padding: 3px;
-	background: @loadingBackgroundColor;
-	position: absolute;
-	cursor: wait;
+	position: absolute; 
 	white-space: nowrap;
 }
 .z-loading {
@@ -355,8 +351,10 @@ input[type="checkbox"] {
 }
 .z-loading-indicator,
 .z-apply-loading-indicator {
+	font-size:14px;
+	.borderRadius(4px);
 	color: @textColorGrayDark;
-	border: 1px solid @baseBorderColor;
+	border: 1px solid @primaryColor;
 	background: @baseBackgroundColor;
 	white-space: nowrap;
 }
@@ -701,7 +699,7 @@ select:disabled::-ms-value {
 			}
 			&-indicator {
 				width: @scrollbarWidth - 2;
-				border: 1px solid @scrollbarBorderColor;
+				border: 1px solid @scrollbarBorderColor; 
 				.borderRadius(2px);
 				.horGradient(@scrollbarGradientStart, @scrollbarGradientEnd);
 				position: absolute;

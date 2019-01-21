@@ -1,0 +1,14 @@
+
+*.less
+src/archive/web/js/zul/menu/less/menu.less
+src/archive/web/js/zul/tab/less/tabbox.less
+src/archive/web/zul/less/_zkvariables.less
+src/archive/web/zul/less/norm.less
+target/classes/web/ecds/js/zul/tab/css/tabbox.css.dsp
+target/classes/web/ecds/zul/css/norm.css.dsp
+src/archive/web/js/zul/menu/less/menu.less
+src/archive/web/js/zul/tab/less/tabbox.less
+src/archive/web/zul/less/_zkvariables.less
+src/archive/web/zul/less/norm.less
+target/classes/web/ecds/js/zul/tab/css/tabbox.css.dsp
+target/classes/web/ecds/zul/css/norm.css.dsp
