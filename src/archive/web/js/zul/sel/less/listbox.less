@@ -118,10 +118,10 @@
 		border: 1px solid @inputBorderColor;
 		vertical-align: text-top;
 		.borderRadius(@inputBorderRadius);
+		cursor: pointer;
 		
 		.z-listheader-icon {
-			display: none;
-			cursor: default;
+			display: none; 
 		}
 		&.z-listheader-checked .z-listheader-icon {
 			color: @checkedColor;
@@ -237,17 +237,8 @@
 				color: @selectedHoverColor;
 			}
 		}
-	}
-	&-focus {
-		> .z-listcell {
-			.verGradient(@meshContentFocusStart, @meshContentFocusEnd);
-			background-clip: padding-box;
-			position: relative;
-		}
-		.z-listcell-content {
-			color: @hoverColor;
-		}
-	}
+	} 
+	
 	//selected check mark
 	&-selected {
 		> .z-listcell > .z-listcell-content 

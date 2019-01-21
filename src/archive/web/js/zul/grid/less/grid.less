@@ -15,14 +15,13 @@
 }
 
 //grid
-.z-grid {
-	border-bottom: 1px solid @baseBorderColor;
+.z-grid { 
 	overflow: hidden;
 	zoom: 1;
 	//grid header
 	&-header {
 		width: 100%;
-		.verGradient(@baseGradientStart, @baseGradientEnd);
+		.verGradient(@ecdsListboxHeader, @ecdsListboxHeader);
 		position: relative;
 		overflow: hidden;
 		.resetTable();
@@ -90,7 +89,7 @@
 	border-left: 1px solid @meshTitleBorderColor;
 	border-bottom: 1px solid @meshTitleBorderColor;
 	padding: 0;
-	.verGradient(@baseGradientStart, @baseGradientEnd);
+	.verGradient(@ecdsListboxHeader, @ecdsListboxHeader);
 	background-clip: padding-box;
 	position: relative;
 	overflow: hidden;
@@ -233,6 +232,7 @@ body:not(.gecko) {
 	overflow: hidden;
 }
 .z-column-content {
+	color: @ecdsWhiteColor;
 	font-weight: bold;
 	padding: 4px 5px 3px;
 }
