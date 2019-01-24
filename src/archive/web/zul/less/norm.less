@@ -358,10 +358,9 @@ input[type="checkbox"] {
 .z-loading-indicator,
 .z-apply-loading-indicator {
 	.borderRadius(4px);
-	color: @ecdsMenuColor;
-	border: 1px solid @googleBlue;
 	background: @baseBackgroundColor;
 	white-space: nowrap;
+	.setDarkShadow();
 }
 .z-loading-indicator {
 	padding: 6px;
@@ -887,4 +886,28 @@ body{
 } 
 ::placeholder {
     color: @ecdsPlaceholderColor;
+}
+
+.dark-shadow{
+	-webkit-box-shadow: 1px 1px 1px 1px #ccc;  
+	-moz-box-shadow:    1px 1px 1px 1px #ccc;  
+	box-shadow:         1px 1px 1px 1px #ccc; 
+}
+
+.light-shadow{
+	-webkit-box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.1);
+	-moz-box-shadow:    0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.1);
+	box-shadow:         0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.1);
+}
+
+.setDarkShadow() {
+	-webkit-box-shadow: 1px 1px 1px 1px #ccc;  
+	-moz-box-shadow:    1px 1px 1px 1px #ccc;  
+	box-shadow:         1px 1px 1px 1px #ccc; 
+}
+
+.setLightShadow() {
+	-webkit-box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.1);
+	-moz-box-shadow:    0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.1);
+	box-shadow:         0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.1);
 }

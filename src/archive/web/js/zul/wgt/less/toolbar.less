@@ -112,13 +112,11 @@
 	position: relative;
 	cursor: pointer;
 
-	&:hover {
-		border-color: @hoverBorderColor;
-		background: white;
+	&:hover { 
+		background: @ecdsListboxHighlistColor;
 	}
 	&:active {
-		border: 1px solid @activeBorderColor;
-		background: white;
+		background: @ecdsListboxHighlistColor;
 		.boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75), 0 0 7px #CFCFCF');
 	}
 	&[disabled] {
