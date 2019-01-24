@@ -23,7 +23,7 @@
 	//listbox header
 	&-header {
 		width: 100%;
-		.verGradient(@baseGradientStart, @baseGradientEnd);
+		.verGradient(@ecdsWhiteColor, @ecdsWhiteColor);
 		position: relative;
 		overflow: hidden;
 		.resetTable();
@@ -80,10 +80,7 @@
 			border-left: 1px solid @meshTitleBorderColor;
 		}
 	}
-	&-bar {
-		border-right: 1px solid @meshTitleBorderColor;
-		border-bottom: 1px solid @meshTitleBorderColor;
-	}
+	
 }
 .z-listheader {
 	border-right: 1px solid @meshTitleBorderColor;
@@ -160,12 +157,12 @@
 	background: @meshBackgroundColor;
 	
 	td:last-child {
-		border-right: none;
+		//border-right: none;
 	}
 	//list cell
 	.z-listcell {
-		border-right: 1px solid grey;
-		border-bottom: 1px solid grey;
+		border-right: 1px solid @baseBorderColor;
+		border-bottom: 1px solid @baseBorderColor;
 		overflow: hidden;
 		cursor: pointer;
 		position: relative;

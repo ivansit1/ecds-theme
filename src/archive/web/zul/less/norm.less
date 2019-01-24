@@ -300,11 +300,17 @@ input[type="checkbox"] {
 }
 .z-label,
 .z-radio-content,
-.z-checkbox-content,
-.z-loading {
+.z-checkbox-content{
 	font-family: @baseContentFontFamily;
 	font-size: @fontSizeMedium;
 	font-weight: normal;
+}
+
+.z-loading {
+	font-family: @baseContentFontFamily;
+	font-size: @loadingFontSize;
+	font-weight: normal;
+	color: @ecdsMenuColor;
 }
 
 .z-temp,
@@ -351,10 +357,9 @@ input[type="checkbox"] {
 }
 .z-loading-indicator,
 .z-apply-loading-indicator {
-	font-size:14px;
 	.borderRadius(4px);
-	color: @textColorGrayDark;
-	border: 1px solid @primaryColor;
+	color: @ecdsMenuColor;
+	border: 1px solid @googleBlue;
 	background: @baseBackgroundColor;
 	white-space: nowrap;
 }
@@ -363,21 +368,38 @@ input[type="checkbox"] {
 }
 .z-apply-loading-indicator {
 	font-family: @baseTitleFontFamily;
-	font-size: @fontSizeMedium;
+	font-size: @loadingFontSize;
 	font-weight: normal;
-	padding: 2px;
+	padding: 4px;
 }
 .z-apply-loading-icon,
 .z-loading-icon,
 .z-renderdefer {
-	.size(16px, 16px);
-	background: transparent no-repeat center;
-	.encodeThemeURL(background-image, '~./zul/img/misc/progress.gif');
+	 border: 3px solid @googleBlue;
+	 border-radius: 50%;
+	 border-top: 3px solid @baseBackgroundColor;
+	 width: 16px;
+	 height: 16px;
+	 -webkit-animation: spin 1.5s linear infinite; /* Safari */
+	 animation: spin 1.5s linear infinite;
 }
+ 
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+ 
+
 .z-apply-loading-icon,
 .z-loading-icon {
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 }
 .z-apply-mask {
 	.size(100%, 100%);
@@ -423,8 +445,8 @@ input[type="checkbox"] {
 		left: 46%;
 	}
 	.z-loading-indicator {
-		font-size: @fontSizeMedium;
-		color: @textColorGrayDark;
+		font-size: @loadingFontSize;
+		color: @ecdsMenuColor;
 	}
 }
 

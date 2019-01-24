@@ -64,6 +64,16 @@
 	&-close {
 		font-size: @fontSizeXLarge;
 		line-height: 23px;
+		color: @ecdsWhiteColor;
+		background: none;
+		border-radius: 0px;
+		border: none;
+		margin: 0px;
+		&:hover {
+			color: @ecdsWhiteColor;
+			border-color: @ecdsWindowCloseColor; 
+			background: @ecdsWindowCloseColor;
+		}
 	}
 
 	&-minimize {
@@ -130,7 +140,6 @@
 
 	&-modal&-shadow, &-highlighted&-shadow {
 		.borderRadius(@baseBorderRadius);
-		.boxShadow('inset 0px 1px 1px #FFFFFF, 0 0 4px rgba(0, 0, 0, 0.7)');
 	}
 
 	&-embedded {
@@ -159,7 +168,7 @@
 		}
 
 		&.z-window-shadow {
-			.boxShadow('0 0 3px rgba(0, 0, 0, 0.5)');
+			.boxShadow('none');
 		}
 	}
 }

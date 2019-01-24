@@ -335,7 +335,7 @@
 	}
 }
 
-.z-tab {
+.z-tab { 
 	font-family: @baseTitleFontFamily;
 	font-size: @fontSizeMedium;
 	display: block;
@@ -354,15 +354,7 @@
 	&-content {
 		display: block;
 	}
-
-	&:hover {
-		background-color:@ecdsMenuHoverColor;  
-		-webkit-transition: all 0.1s ease-in-out;
-		-moz-transition: all 0.1s ease-in-out;
-		-o-transition: all 0.1s ease-in-out;
-		transition: all 0.1s ease-in-out;
-	}
-
+	
 	&-icon {
 		display: block; 
 		margin-left: 8px;
@@ -377,6 +369,9 @@
 	}
 
 	&-text { 
+		&:hover {  
+			color: @googleBlue; 
+		}
 		font-style: normal;
 		color: @ecdsMenuColor;
 		display: block;
