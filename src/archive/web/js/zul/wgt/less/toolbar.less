@@ -113,14 +113,21 @@
 	cursor: pointer;
 
 	&:hover { 
-		background: @ecdsListboxHighlistColor;
+		background: @ecdsToolbarBackgroundHover;
+		.z-toolbarbutton-content {
+			color: @ecdsWhiteColor;
+		}
 	}
 	&:active {
-		background: @ecdsListboxHighlistColor;
+		background: @ecdsToolbarBackgroundHover;
+		color: @ecdsWhiteColor;
 		.boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75), 0 0 7px #CFCFCF');
 	}
 	&[disabled] {
 		color: @disabledColor !important;
+		.z-toolbarbutton-content {
+			color: @disabledColor !important;
+		}
 		border: 1px solid transparent;
 		.resetGradient();
 		.opacity(@disabledOpacityLow);
@@ -139,8 +146,7 @@
 	padding: 2px;
 	line-height: @baseLineHeight + 6; // 20px for IE to v-align center
 	vertical-align: middle;
-	position: relative;
-	text-shadow: 0 1px #FFFFFF;
+	position: relative; 
 	white-space:nowrap;
 }
 

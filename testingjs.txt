@@ -1,61 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?><?page title="new page title" contentType="text/html;charset=UTF-8"?>
-<zk> 
-	<window xmlns:w="http://www.zkoss.org/2005/zk/client" id='winPlsDailyReport' border="none" apply="com.sae.ecds.custom.mainfeist.PlsDailyReport"
-		vflex='true'>
-		<grid>
-			<columns>
-				<column width="25%" />
-				<column width="20%" />
-				<column width="15%" />
-				<column width="*" /> 
-			</columns>
-			<rows>
-				<row>
-					<label sclass='label-display' value="Truck No." />
-					<bandbox id="txtCNTruckNo" width="150px" maxlength="10" />
-					<cell colspan='2' />
-					<!-- <cell align="right"> <label>Type :</label> </cell> <cell> <listbox rows="1" mold="select" width="120px" id="lstType"> 
-						<listitem label="PDF" value="pdf"/> <listitem label="EXCEL" value="xlsx"/> <listitem label="Open Office" value="ods"/> <listitem 
-						label="Word" value="docx"/> </listbox> </cell> <cell> <label></label> </cell> -->
-				</row>
-				<row>
-					<label sclass='label-display'>From</label>
-					<datebox id="dateFrom" format="dd/MM/yyyy" width="150px" />
-					<label sclass='label-display'>To</label>
-					<datebox id="dateTo" format="dd/MM/yyyy" width="150px" /> 
-				</row>
-			</rows>
-		</grid>
-		<div sclass="z-toolbar" style="padding:0">
-			<hbox width='100%' widths="65%,35%">
-				<hbox> 
-				</hbox>
-				<hbox>
-					<toolbar style='border-style: none;'> 
-						<button id="btnPreview" label="Preview" xmlns:w="client" w:onClick="buttonLoading(this)" iconSclass="fas fa-search fa-lg" sclass='toolbarButton disableButton' />
-						<button id="btnExport" label="Export" iconSclass="far fa-file-pdf fa-lg" sclass='toolbarButton' />
-					</toolbar>
-					  
-				</hbox>
-			</hbox>
-		</div> 
-		<iframe id="incReport" vflex="true" width="100%" />
-	</window>
-	<script>
-		function buttonLoading(evt){ 
-			var i = $(evt).find('i:first');
-			
-			 $(i).removeClass();
-			 $(i).addClass('fas fa-sync-alt fa-lg fa-spin');
-			 
-		}
-		
-		function buttonFinishLoading(evt){ 
-			var i = $(evt).find('i:first');
-			
-			 $(i).removeClass();
-			 $(i).addClass('fas fa-sync-alt fa-lg fa-spin');
-			 
-		}
-	</script>
-</zk>
+<?component name="loadingbutton" macroURI="loadingbutton.zul" class="com.zkresearch.common.LoadingButton" ?>
+
+
+<loadingbutton label='SAP' iconSclass='fas fa-search fa-1x'></loadingbutton>
+
+<script type="text/javascript">
+	function loadingIcon(o) {
+	   $(o).find( "i" ).addClass('fa-spin').addClass('fa-sync');
+	}
+	
+	function removeIcon(o) {   
+	   $('$'+o).find( "i" ).removeClass('fa-spin').removeClass('fa-sync');
+	}
+</script>
+
+////////////////
+
+
+<button  id="loadingButton" label="${empty arg.label ? '' : arg.label}"
+ xmlns:w="http://www.zkoss.org/2005/zk/client" w:onClick='loadingIcon(this)'  
+  iconSclass="${empty arg.iconSclass ? '' : arg.iconSclass}">
+	 <attribute name="onClick">    
+		  Clients.evalJavaScript("removeIcon('loadingButton')");
+      </attribute>
+</button>  
+
+
+////////////////
+package com.zkresearch.common;
+
+import java.util.concurrent.TimeUnit;
+
+import org.zkoss.zk.ui.Components; 
+import org.zkoss.zk.ui.HtmlMacroComponent; 
+import org.zkoss.zk.ui.select.annotation.Listen;
+import org.zkoss.zk.ui.select.annotation.Wire;
+import org.zkoss.zul.Button;  
+
+public class LoadingButton extends HtmlMacroComponent {
+    private static final long serialVersionUID = 1L;
+    @Wire("#loadingButton")
+    private Button loadingButton; 
+    
+	@Listen("onClick = #loadingButton")
+	public void edit() throws InterruptedException {   
+		if(Components.getComposer(loadingButton.getRoot()) != null) {
+			if(Components.getComposer(loadingButton.getRoot()) instanceof LoadingButtonSearch) {
+				LoadingButtonSearch a = (LoadingButtonSearch)Components.getComposer(loadingButton.getRoot());
+				a.loadingButtonSearch();
+			}
+		} 
+	}
+   
+}
+
+
+//////////////////////////
+package com.zkresearch.common;
+
+public interface LoadingButtonSearch {
+	public void loadingButtonSearch();
+}
