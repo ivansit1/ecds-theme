@@ -60,3 +60,12 @@ package com.zkresearch.common;
 public interface LoadingButtonSearch {
 	public void loadingButtonSearch();
 }
+
+
+
+////////////////////////
+  <div class="btn-group" style='margin:10px'>
+	      	 <n:i class='fas fa-print'></n:i>
+			  <button >Pack List</button>
+			  <button>Carton</button> 
+			</div>

@@ -17,13 +17,13 @@
 //listbox
 .z-listbox {
 	border-top: 1px solid @baseBorderColor;
-	border-bottom: 1px solid @baseBorderColor;
+	border-bottom: 1px solid @ecdsListboxLightBorderColor;
 	overflow: hidden;
 	zoom: 1;
 	//listbox header
 	&-header {
 		width: 100%;
-		.verGradient(@ecdsWhiteColor, @ecdsWhiteColor);
+		background: @ecdsWhiteColor;
 		position: relative;
 		overflow: hidden;
 		.resetTable();
@@ -81,17 +81,17 @@
 	
 }
 .z-listheader {
-	border-right: 1px solid @meshTitleBorderColor;
-	border-bottom: 1px solid @meshTitleBorderColor;
+	border-right: 1px solid @ecdsListboxHeaderBorder;
+	border-bottom: 1px solid @ecdsListboxHeaderBorder;
 	padding: 0;
-	.verGradient(@ecdsListboxHeader, @ecdsListboxHeader);
+	background: @ecdsListboxHeader;
 	background-clip: padding-box;
 	position: relative;
 	overflow: hidden;
 	white-space: nowrap;
 	
 	&-hover {
-		.verGradient(@ecdsListboxHeader, @ecdsListboxHeader);
+		background: @ecdsListboxHeader;
 	}
 	&-sort {
 		.z-listheader-content {
@@ -159,8 +159,8 @@
 	}
 	//list cell
 	.z-listcell {
-		border-right: 1px solid @baseBorderColor;
-		border-bottom: 1px solid @baseBorderColor;
+		//border-right: 1px solid @baseBorderColor;
+		border-bottom: 1px solid @ecdsListboxLightBorderColor;
 		overflow: hidden;
 		cursor: pointer;
 		position: relative;
@@ -168,7 +168,7 @@
 	}
 	&:hover {
 		> .z-listcell {
-			.verGradient(@meshContentHoverStart, @meshContentHoverEnd);
+			background: @meshContentHoverStart;
 			background-clip: padding-box;
 
 			> .z-listcell-content {
@@ -195,7 +195,7 @@
 	//selected list cell
 	&.z-listitem-selected {
 		> .z-listcell { 
-			.verGradient(@selectedGradientStart, @selectedGradientEnd);
+			background: @selectedGradientStart;
 			background-clip: padding-box;
 			position: relative;
 
@@ -205,7 +205,7 @@
 		}
 		&:hover {
 			> .z-listcell { 
-				.verGradient(@selectedHoverGradientStart, @selectedHoverGradientEnd);
+				background: @selectedHoverGradientStart;
 				position: relative;
 			}
 			.z-listcell-content {
@@ -215,7 +215,7 @@
 	}
 	&.z-listitem-selected.z-listitem-focus {
 		> .z-listcell { 
-			.verGradient(@selectedFocusGradientStart, @selectedFocusGradientEnd);
+			background: @selectedFocusGradientStart;
 			background-clip: padding-box;
 			position: relative;
 
@@ -225,7 +225,7 @@
 		}
 		&:hover {
 			> .z-listcell { 
-				.verGradient(@selectedHoverGradientStart, @selectedHoverGradientEnd);
+				background: @selectedHoverGradientStart;
 				position: relative;
 			}
 			.z-listcell-content {
@@ -289,7 +289,7 @@ body:not(.gecko) {
 		border: 1px solid @meshTitleBorderColor;
 		border-left: none;
 		border-right: none;
-		.verGradient(@groupGradientStart, @groupGradientEnd);
+		background: @groupGradientStart;
 		position: relative;
 		overflow: hidden;
 		
@@ -340,7 +340,7 @@ body:not(.gecko) {
 	}
 }
 .z-listgroupfoot-inner {
-	.verGradient(@groupGradientEnd, @groupGradientStart);
+	background: @groupGradientEnd;
 	overflow: hidden;
 }
 //content

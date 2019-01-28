@@ -4,7 +4,7 @@
 	height: @baseBarHeight;
 	border-bottom: 1px solid @pagingBorderColor;
 	padding: 4px 10px 3px;
-	.verGradient(@baseGradientStart, @baseGradientEnd);
+	background: @ecdsLightBorderColor;
 	position: relative;
 	
 	&-os {
@@ -24,13 +24,11 @@
 		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @pagingColor);
 		display: inline-block;
 		min-width: @baseButtonWidth;
-		height: @baseButtonHeight;
-		border: 1px solid @pagingBorderColor;
+		height: @baseButtonHeight; 
 		.borderRadius(@borderRadiusSmall);
 		margin-right: 6px;
 		padding: 4px 0px;
-		line-height: @baseLineHeight;
-		.verGradient(@baseGradientStart, @baseGradientEnd);
+		line-height: @baseLineHeight; 
 		text-align: center;
 		vertical-align: top;
 		cursor: pointer;
