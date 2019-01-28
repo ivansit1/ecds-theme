@@ -311,7 +311,7 @@ input[type="checkbox"] {
 	font-family: @baseContentFontFamily;
 	font-size: @loadingFontSize;
 	font-weight: normal;
-	color: @ecdsMenuColor;
+	color: white;
 }
 
 .z-temp,
@@ -359,9 +359,11 @@ input[type="checkbox"] {
 .z-loading-indicator,
 .z-apply-loading-indicator {
 	.borderRadius(4px);
-	background: @baseBackgroundColor;
+	background: black;
+	opacity:0.8;
+	margin: 5px;
 	white-space: nowrap;
-	.setDarkShadow();
+	//.setDarkShadow();
 }
 .z-loading-indicator {
 	padding: 6px;
@@ -375,6 +377,7 @@ input[type="checkbox"] {
 .z-apply-loading-icon,
 .z-loading-icon,
 .z-renderdefer {
+	 margin-right: 4px;
 	 border: 3px solid @googleBlue;
 	 border-radius: 50%;
 	 border-top: 3px solid @baseBackgroundColor;
@@ -904,9 +907,9 @@ body{
 }
 
 .setDarkShadow() {
-	-webkit-box-shadow: 1px 1px 1px 1px #ccc;  
-	-moz-box-shadow:    1px 1px 1px 1px #ccc;  
-	box-shadow:         1px 1px 1px 1px #ccc;  
+	-webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:    0 0 4px 1px rgba(0, 0, 0, 0.3);
+	box-shadow:         0 0 4px 1px rgba(0, 0, 0, 0.3);
 	margin:2px;
 }
 
