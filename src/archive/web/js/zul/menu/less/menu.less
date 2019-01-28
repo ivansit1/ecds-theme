@@ -1,16 +1,16 @@
 @import "~./zul/less/_header.less";
 
 .hoverStyle() {
-	border-color: @ecdsMenuHoverColor;
+	border: 1px solid @ecdsMenuHoverColor;
 	background-color: @ecdsMenuHoverColor;  
 }
 .hoverStyleMenuItem() {
-	border-color: @ecdsMenuHoverFontColor;
+	border: 1px solid @ecdsMenuHoverFontColor;
 	background-color: @ecdsMenuHoverFontColor;  
 	color: @ecdsMenuHoverColor;
 }
 .activeStyle() {
-	border-color: @ecdsMenuHoverColor;
+	border: 1px solid @ecdsMenuHoverColor;
 	background-color: @ecdsMenuHoverColor;
 	color:@ecdsMenuHoverFontColor;
 }
@@ -32,10 +32,12 @@
 	position: relative;
 
 	ul {
+		height:100%;
 		overflow: hidden;
 		.restUl();
 	}
 	li {
+		height:100%;
 		display: block;
 		padding: 0;
 		position: relative;
@@ -109,7 +111,8 @@
 		max-width: @menuImageSize;
 		margin-right: 3px;
 	}
-	&-content {
+	&-content { 
+		height:100%;
 		color: @ecdsMenuColor;
 		display: block;
 		border: 1px solid transparent; 
