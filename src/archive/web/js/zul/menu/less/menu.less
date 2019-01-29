@@ -3,16 +3,19 @@
 .hoverStyle() {
 	border: 1px solid @ecdsMenuHoverColor;
 	background-color: @ecdsMenuHoverColor;  
+	color: @ecdsMenuHoverFontColor; 
+	z-index: 11;
 }
 .hoverStyleMenuItem() {
-	border: 1px solid @ecdsMenuHoverFontColor;
-	background-color: @ecdsMenuHoverFontColor;  
+	border: 1px solid @ecdsMenuActiveFontColor;
+	background-color: @ecdsMenuActiveFontColor;  
 	color: @ecdsMenuHoverColor;
+	z-index: 11;
 }
 .activeStyle() {
 	border: 1px solid @ecdsMenuHoverColor;
 	background-color: @ecdsMenuHoverColor;
-	color:@ecdsMenuHoverFontColor;
+	color:@ecdsMenuActiveFontColor; 
 }
 .restUl() {
 	background: transparent none repeat 0 0;
@@ -52,7 +55,7 @@
 			display: block;
 			width: 1px;
 			
-			border-left: 1px solid @menuPopupSeparatorBackground; 
+			border-left: 1px solid @menuSeparatorBackgroundColor; 
 			line-height: @baseButtonHeight + 5px;
 		}
 	}
@@ -81,6 +84,7 @@
 		}
 	}
 }
+ 
 .z-menu-hover > .z-menu-content {
 	.hoverStyle();
 }
@@ -112,11 +116,10 @@
 		margin-right: 3px;
 	}
 	&-content { 
-		height:100%;
-		color: @ecdsMenuColor;
+		height:100%; 
 		display: block;
 		border: 1px solid transparent; 
-		padding: 5px 8px 5px;
+		padding: 5px 10px 5px;
 		line-height: @baseLineHeight - 2;
 		position: relative;
 		cursor: pointer;
@@ -139,10 +142,10 @@
 		vertical-align: text-bottom;
 	}
 }
-.z-menu { 
-	margin-right:1px;
-	&-text {
-		font-weight: bold;
+.z-menu {   
+	z-index:1;
+	&:hover {
+		z-index:11;
 	}
 	&-separator {
 		display: none;
@@ -168,8 +171,9 @@
 			margin-right: 3px;
 		}
 	}
-	&-content {
-		padding-right: 18px;
+	&-content { 
+		border-right:1px solid @menuSeparatorBackgroundColor;
+		color: @ecdsMenuColor;
 		&:hover {
 			.hoverStyle();
 		}
@@ -209,6 +213,7 @@
 		.activeStyle();
 	}
 	&-content { 
+		color: @ecdsMenuHoverFontColor;
 		&:hover {
 			.hoverStyleMenuItem();
 		}
@@ -236,7 +241,7 @@
 	z-index: @basePopupZIndex;
 }
 .z-menupopup {
-	//border: 1px solid @baseBorderColor; 
+	border-right: none;
 	background: @ecdsMenuHoverColor;
 	left: 0;
 	top: 0;
@@ -271,6 +276,14 @@
 		left: 7px;
 	}
 	.z-menu-content {
+		&:hover {
+			.hoverStyleMenuItem();
+			i {
+				color:white;
+			}
+		}
+		border-right:none;
+		color:@ecdsMenuHoverFontColor;
 		padding-right: 16px;
 	}
 	.z-menu-icon {
