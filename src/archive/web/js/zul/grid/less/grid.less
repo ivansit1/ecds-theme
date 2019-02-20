@@ -16,6 +16,7 @@
 
 //grid
 .z-grid { 
+	border-bottom: 1px solid @baseBorderColorLight;
 	overflow: hidden;
 	zoom: 1;
 	//grid header
@@ -130,7 +131,16 @@
 		cursor: e-resize;
 	}
 }
-//row and cell
+//row and cell'
+.z-rows > tr:last-child > td{ 
+	border-bottom: none; 
+}
+
+.z-rows {
+	tr:last-child {
+		border-bottom: none;
+	}
+}
 .z-row {
 	td:last-child {
 		//border-right: none;
@@ -223,13 +233,13 @@ body:not(.gecko) {
 }
 .z-column-content {
 	color: @ecdsWhiteColor;
-	font-weight: bold;
+	//font-weight: bold;
 	padding: 4px 5px 3px;
 }
 .z-group-content,
 .z-groupfoot-content {
 	.z-label {
-		font-weight: bold;
+		//font-weight: bold;
 	}
 }
 //Cell Content

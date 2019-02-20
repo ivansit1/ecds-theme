@@ -19,8 +19,8 @@
 
 	&-header {
 		border-bottom: 1px solid @baseBorderColor;
-		.fontStyle(@baseTitleFontFamily, @fontSizeMedium, normal, white);
-		padding-left: 3px;
+		.fontStyle(@baseTitleFontFamily, @fontSizeMedium, normal, @windowFontColor);
+		padding-left: 8px;
 		font-weight: bold;
 		line-height: @baseButtonWidth;
 		.defaultOverflowZoom();
@@ -64,7 +64,7 @@
 	&-close {
 		font-size: @fontSizeXLarge;
 		line-height: 23px;
-		color: @ecdsWhiteColor;
+		color: @windowFontColor;
 		background: none;
 		border-radius: 0px;
 		border: none;

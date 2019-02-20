@@ -16,8 +16,8 @@
 
 //listbox
 .z-listbox {
-	border-top: 1px solid @baseBorderColor;
-	border-bottom: 1px solid @ecdsListboxLightBorderColor;
+	//border-top: 1px solid @baseBorderColor;
+	border-bottom: 1px solid @baseBorderColor;
 	overflow: hidden;
 	zoom: 1;
 	//listbox header
@@ -78,8 +78,11 @@
 			border-left: 1px solid @meshTitleBorderColor;
 		}
 	}
-	
+	&-bar {
+		background: @ecdsListboxHeader;
+	}
 }
+
 .z-listheader {
 	border-right: 1px solid @ecdsListboxHeaderBorder;
 	border-bottom: 1px solid @ecdsListboxHeaderBorder;
@@ -169,6 +172,8 @@
 	&:hover {
 		> .z-listcell {
 			background: @meshContentHoverStart;
+			border-right: 1px solid @ecdsListboxBorderHighlistColor;
+			border-bottom: 1px solid @ecdsListboxBorderHighlistColor;
 			background-clip: padding-box;
 
 			> .z-listcell-content {
@@ -198,7 +203,8 @@
 			background: @selectedGradientStart;
 			background-clip: padding-box;
 			position: relative;
-
+			border-right:1px solid @ecdsHighlightColorDark1;
+			border-bottom:1px solid @ecdsHighlightColorDark1;
 			> .z-listcell-content {
 				color: @selectedColor !important;;
 			}
@@ -355,15 +361,14 @@ body:not(.gecko) {
 	overflow: hidden;
 }
 .z-listheader-content {
-	.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @ecdsWhiteColor);
-	font-weight: bold;
+	.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @ecdsWhiteColor); 
 	padding: 4px 5px 3px;
 	position: relative;
 }
 .z-listgroup-content,
 .z-listgroupfoot-content {
 	.z-label {
-		font-weight: bold;
+		//font-weight: bold;
 	}
 }
 //paging

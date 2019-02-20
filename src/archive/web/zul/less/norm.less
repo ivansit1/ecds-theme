@@ -318,7 +318,7 @@ input[type="checkbox"] {
 .z-modal-mask {
 	.size(100%, 100%);
 	background: @maskBackgroundColor;
-	.opacity(0.6);
+	.opacity(0.65);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -360,7 +360,7 @@ input[type="checkbox"] {
 .z-apply-loading-indicator {
 	color: @ecdsWhiteColor;
 	.borderRadius(4px);
-	background: black;
+	background: @maskBackgroundColor;
 	opacity:0.8;
 	margin: 5px;
 	white-space: nowrap;
@@ -438,19 +438,17 @@ input[type="checkbox"] {
 
 .z-temp * { //temporary
 	font-size: 5px;
-	color: #FFFFFF;
-	background: #FFFFFF;
+	color: #FFFFFF; 
 	text-decoration: none;
 }
 .z-temp {
-	.z-loading {
-		background: @loadingBackgroundColor;
+	.z-loading { 
 		top: 49%;
 		left: 46%;
 	}
 	.z-loading-indicator {
 		font-size: @loadingFontSize;
-		color: @ecdsMenuColor;
+		color: white;
 	}
 }
 
@@ -932,9 +930,9 @@ body{
 }
 
 .grid-remove-border tr.z-row td.z-row-inner,
-	tr.z-row,
-	div.z-grid-body div.z-cell,
-	div.z-grid {
+	.grid-remove-border  tr.z-row,
+	.grid-remove-border div.z-grid-body div.z-cell,
+	.grid-remove-border div.z-grid {
   border: none; 
 }
 
