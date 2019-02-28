@@ -12,18 +12,14 @@
 	white-space: nowrap;
 	margin-right: 4px;
 
-	&:hover {
-		border-color: @ecdsButtonHover; 
+	&:hover { 
 		background-color: @ecdsButtonHover;
 	}
-	&:focus { 
-		border-color: @ecdsButtonHover;
-		background-color: @primaryColor;
-		.boxShadow('inset 0 0 2px #0CBCFF');
+	&:focus {  
+		.boxShadow('0 0 0 2px rgba(26,116,232,0.4)');
 	}
-	&:active {
-		border-color: @ecdsButtonActive; 
-		background-color: @buttonColor;
+	&:active { 
+		background-color: @ecdsButtonActive;
 	}
 	&[disabled] {
 		border-color: @buttonBorderColor;
