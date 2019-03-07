@@ -2,10 +2,10 @@
 
 .z-toolbar {
 	display: block;
-	border-color: @baseBorderColorLight;
+	border-color: @ecdsLightBorderColor;
 	border-style: solid;
 	border-width: 0 0 1px;
-	padding: 4px 4px 3px;
+	padding: 4px 4px 3px 10px;
 	.verGradient(@baseGradientStart, @baseGradientEnd);
 	position: relative;
 
@@ -138,7 +138,7 @@
 	.verGradient(@checkedGradientStart, @checkedGradientEnd);
 }
 .z-toolbarbutton-content {
-	.fontStyle(@baseTitleFontFamily, @fontSizeMedium, normal, @secondaryColor);
+	.fontStyle(@baseTitleFontFamily, @fontSizeMedium, normal, @ecdsToolbarFontColor);
 	padding: 2px;
 	line-height: @baseLineHeight + 6; // 20px for IE to v-align center
 	vertical-align: middle;
