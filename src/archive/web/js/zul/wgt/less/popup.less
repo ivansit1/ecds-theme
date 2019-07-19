@@ -2,18 +2,17 @@
 
 .z-popup {
 	border: 1px solid @popupBorderColor;
-	.borderRadius(1px);
+	.borderRadius(@borderRadiusSmall);
 	.verGradient(@popupGradientStart, @popupGradientEnd);
 	position: absolute;
 	top: 0;
 	left: 0;
 	overflow: hidden;
-	.boxShadow('0 0 15px rgba(0, 0, 0, 0.35)');
+	.boxShadow('3px 3px 3px rgba(0, 0, 0, 0.25)');
 
 	&-content {
 		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @textColorGray);
-		height: 100%;
-		padding: 10px;
+		height: 100%; 
 		line-height: @baseLineHeight;
 	}
 }
@@ -33,14 +32,14 @@
 	z-index: 1;
 
 	&.z-icon-times {
-		margin-top: -5px;
+		margin-top: -2px;
 	}
 
 	&.z-icon-times-circle, 
 	&.z-icon-exclamation-circle,
 	&.z-icon-info-circle {
-		font-size: 24px;
-		margin-top: -12px;
+		font-size: 18px;
+		margin-top: -9px;
 		left: 12px;
 	}
 }
@@ -54,11 +53,11 @@
 }
 
 .z-notification-up + .z-notification-icon {
-	margin-top: -6px;
+	margin-top: -3px;
 }
 
 .z-notification-down + .z-notification-icon {
-	margin-top: -18px;
+	margin-top: -15px;
 }
 
 .z-notification-content {
@@ -66,18 +65,19 @@
 	font-size: @fontSizeSmall;
 	font-weight: normal;
 	width: 250px;
-	min-height: 130px;
+	min-height: 35px;
 	.borderRadius(10px);
-	padding: 15px 18px 15px 45px;
+	padding: 15px 18px 15px 40px;
 	position: relative;
 	overflow: hidden;
 	.boxShadow('1px 1px 3px rgba(0, 0, 0, 0.35)');
 }
 
 .z-notification-pointer ~ .z-notification-content {
-	.displaySize(table-cell, 200px, 60px);
-	min-width: 125px; // fix for IE9
-	min-height: 60px; // fix for IE9
+	.displaySize(table-cell, min-content, 35px);
+	min-width: 50px; // fix for IE9
+	min-height: 35px; // fix for IE9
+	max-width: 250px;
 	.borderRadius(5px);
 	padding: 5px 18px 5px 45px;
 	vertical-align: middle;

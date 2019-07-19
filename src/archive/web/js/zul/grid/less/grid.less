@@ -16,21 +16,23 @@
 
 //grid
 .z-grid { 
+	//border-top: 1px solid @ecdsListboxHeaderBorder;
 	border-bottom: 1px solid @baseBorderColorLight;
 	overflow: hidden;
 	zoom: 1;
 	//grid header
+	background: @ecdsListboxBackground;
 	&-header {
 		width: 100%;
-		background: ecdsListboxHeader;
+		background: @ecdsListboxHeader;
 		position: relative;
 		overflow: hidden;
 		.resetTable();
 	}
 	&-header-border {
-		border-bottom: 1px solid @meshTitleBorderColor;
-		margin-top: -1px;
-		position: relative;
+		//border-bottom: 1px solid @meshTitleBorderColor;
+		//margin-top: -1px;
+		//position: relative;
 	}
 	//grid body
 	&-body {
@@ -49,18 +51,18 @@
 	}
 	//grid footer
 	&-footer {
-		border-top: 1px solid @baseBorderColor;
+		//border-top: 1px solid @ecdsLightBorderColor;
 		overflow: hidden;
 		white-space: nowrap;
 		.resetTable();
 		
 		.z-footer {
 			overflow: hidden;
-			background: @meshFootBackgroundColor;
+			background: @ecdsListboxBackground;
 		}
 	}
 	.z-row-inner, .z-cell {
-		background: @meshBackgroundColor;
+		background: @ecdsListcellBackground;
 	} 
 	// ZK-3138: ROD loading indicator
 	&-loading {
@@ -74,6 +76,11 @@
 		&.z-columns-border {
 			border-right: 1px solid @meshTitleBorderColor;
 		}
+	}
+	
+	&-bar {
+		background: @ecdsListboxHeader;
+		border-bottom: 1px solid @ecdsListboxHeaderBorder;
 	}
 }
 .z-column {
@@ -153,6 +160,7 @@
 		position: relative;
 		z-index: 0;
 	}
+	/*
 	&:hover {
 		> .z-row-inner,
 		> .z-cell {
@@ -163,6 +171,7 @@
 			color: @hoverColor;
 		}
 	}
+	*/
 }
 
 body:not(.gecko) {
@@ -227,14 +236,14 @@ body:not(.gecko) {
 	font-family: @baseContentFontFamily;
 	font-size: @fontSizeMedium;
 	color: @textColorGrayLight;
-	padding: 4px 5px;
+	padding: 0px 5px;
 	line-height: @baseButtonHeight;
 	overflow: hidden;
 }
 .z-column-content {
-	color: @ecdsWhiteColor;
-	//font-weight: bold;
-	padding: 4px 5px 3px;
+	.fontStyle(@baseContentFontFamily, @fontSizeMedium, bold, @ecdsListboxHeaderFont); 
+	font-weight: bold;
+	padding: 2px 5px 1px;
 }
 .z-group-content,
 .z-groupfoot-content {
@@ -247,7 +256,7 @@ body:not(.gecko) {
 	font-family: @baseContentFontFamily;
 	font-size: @fontSizeMedium;
 	color: @textColorGrayLight;
-	padding: 4px 5px;
+	padding: 0px 5px;
 	line-height: @baseButtonHeight;
 	overflow: hidden;
 }

@@ -1,10 +1,10 @@
 @import "~./zul/less/_header.less";
 
 .z-paging {
-	height: @baseBarHeight;
+	height: 24px;
 	//border-bottom: 1px solid @pagingBorderColor;
-	padding: 4px 10px 3px;
-	background: @ecdsLightBorderColor;
+	padding: 3px 10px 3px;
+	background: @ecdsListboxHeader;
 	position: relative;
 	
 	&-os {
@@ -12,22 +12,24 @@
 		padding-bottom: 4px;
 	}
 	ul {
-		display: inline-block;
+		display: inline-flex;
+		align-items: center;
 		margin: 0;
 		padding: 0;
 		
 		> li {
-			display: inline;
+			display: inline-flex;
+			align-items: center;
 		}
 	}
 	&-button {
 		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @pagingColor);
 		display: inline-block;
-		min-width: @baseButtonWidth;
-		height: @baseButtonHeight; 
+		min-width: 16px;
+		height: 16px; 
 		.borderRadius(@borderRadiusSmall);
 		margin-right: 6px;
-		padding: 4px 0px;
+		//padding: 4px 0px;
 		line-height: @baseLineHeight; 
 		text-align: center;
 		vertical-align: top;
@@ -96,10 +98,11 @@
 	}
 	&-input {
 		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @textColorGrayDark);
-		height: @baseButtonHeight;
+		height: 18px;
 		border: 1px solid @pagingBorderColor;
 		margin-left: 6px;
-		padding: 3px 0;
+		margin-right: 3px;
+		//padding: 3px 0;
 		line-height: 20px;
 		vertical-align: baseline;
 		&[disabled] {
@@ -117,10 +120,13 @@
 	}
 	&-info {
 		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @textColorGrayDark);
-		padding: 4px 0;
+		//padding: 4px 0;
 		position: absolute;
 		top: 4px;
 		right: 10px;
+		height: 18px;
+		//display: inline-flex;
+		//align-items: center;
 	}
 }
 

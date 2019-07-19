@@ -1,10 +1,11 @@
 @import "~./zul/less/_header.less";
 
 .z-frozen {
-	.encodeThemeURL(background-image, '~./zul/img/common/bar-bg.png');
+	background: @ecdsFrozenBody;
 	overflow: hidden;
 
 	&-body {
+		border-right: 1px solid @ecdsFrozenBorder;
 		overflow: hidden;
 		float: left;
 	}

@@ -49,13 +49,11 @@
 		cursor: pointer;
 
 		&:hover {
-			border-color: @hoverBorderColor;
-			.verGradient(@hoverGradientStart, @hoverGradientEnd);
+			background: @ecdsToolbarBtnBackgroundColor;
 		}
 		&:active {
-			border-color: @activeBorderColor;
-			.verGradient(@activeGradientStart, @activeGradientEnd);
-			.boxShadow('inset 1px 1px 1px #91AAB7');
+			background: @ecdsToolbarBtnBackgroundColorActive; 
+			transition: background-color .5s ease, border .5s ease;
 		}
 	}
 
@@ -170,13 +168,11 @@
 			}
 		}
 		&:hover {
-			border-color: @hoverBorderColor;
-			.verGradient(@hoverGradientStart, @hoverGradientEnd);
+			background: @ecdsToolbarBtnBackgroundColor;	
 		}
 		&:active {
-			border-color: @activeBorderColor;
-			.verGradient(@activeGradientStart, @activeGradientEnd);
-			.boxShadow('inset 1px 1px 1px #91AAB7');
+			background: @ecdsToolbarBtnBackgroundColorActive; 
+			transition: background-color .5s ease, border .5s ease;
 		}
 	}
 	// separator
@@ -289,7 +285,7 @@
 	text-decoration: none;
 }
 .z-comboitem:hover {
-	.verGradient(@hoverGradientStart, @hoverGradientEnd);
+	background: @ecdsToolbarBtnBackgroundColor;	
 }
 .z-comboitem-selected {
 	.verGradient(@selectedGradientStart, @selectedGradientEnd);
@@ -357,7 +353,7 @@
 .z-bandbox-shadow,
 .z-datebox-shadow {
 	.borderRadius(@borderRadiusSmall);
-	.boxShadow('0 0 15px rgba(0, 0, 0, 0.35)');
+	.boxShadow('3px 3px 3px rgba(0, 0, 0, 0.25)');
 }
 
 .ie8 {

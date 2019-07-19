@@ -14,11 +14,11 @@
 	background: @windowBackgroundColor;
 
 	&-shadow {
-		.boxShadow('0 0 4px rgba(0, 0, 0, 0.25)');
+		.boxShadow('3px 3px 3px rgba(0, 0, 0, 0.25)');
 	}
 
 	&-header {
-		border-bottom: 1px solid @windowBackgroundColor;
+		border-bottom: 1px solid @windowHeaderBorderColor;
 		.fontStyle(@baseTitleFontFamily, @fontSizeMedium, normal, @windowFontColor);
 		padding-left: 8px;
 		font-weight: bold;
@@ -73,6 +73,7 @@
 			color: @ecdsWhiteColor;
 			border-color: @ecdsWindowCloseColor; 
 			background: @ecdsWindowCloseColor;
+			transition: background .5s ease, border-color .5s ease, color .5s ease;
 		}
 	}
 

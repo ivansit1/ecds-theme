@@ -194,7 +194,7 @@ input[type="radio"] {
 
 	&[disabled] {
 		cursor: default;
-		background-color: @inputDisableBackgroundColor;
+		background-color: @disabledBackgroundColor;
 		&:checked {
 			border-color: @inputDisableColor;
 			&:before {
@@ -358,9 +358,8 @@ input[type="checkbox"] {
 }
 .z-loading-indicator,
 .z-apply-loading-indicator {
-	color: @ecdsWhiteColor;
-	.borderRadius(4px);
-	background: @maskBackgroundColor;
+	color: @ecdsWhiteColor; 
+	background: @loadingBackgroundColor;
 	opacity:0.8;
 	margin: 5px;
 	white-space: nowrap;
@@ -935,5 +934,3 @@ body{
 	.grid-remove-border div.z-grid {
   border: none; 
 }
-
- 

@@ -3,10 +3,15 @@
 // ------------------------------------
 // ECDS
 // ------------------------------------
-@ecdsLightBorderColor:			#f2f2f2;
-@ecdsListboxHighlistColor:		#dceaf2;
-@ecdsListboxBorderHighlistColor:#C9DFEB;
-@ecdsListboxLightBorderColor:	#F0F2F4;
+@ecdsListcellBackground:		#FFFFD0;
+@ecdsListboxTabHover:			#F9F9F9;
+@ecdsListboxTabHoverDarker:		#bbbbbb;
+@ecdsToolbarBtnBackgroundColor:  #E6F0F5;
+@ecdsToolbarBtnBackgroundColorActive:  #dceaf2;
+@ecdsLightBorderColor:			#e8e8e8;
+@ecdsListboxHighlistColor:		#E6F0F5;
+@ecdsListboxBorderHighlistColor:#dceaf2;
+@ecdsListboxLightBorderColor:	#ebeced;
 @ecdsHighlightColor:			yellow;
 @ecdsHighlightColorDark1:		#e5e500;
 @inputBorderRadius:             @baseBorderRadius;
@@ -29,16 +34,19 @@
 @ecdsWindowCloseColor:			#FF3232;
 @ecdsPlaceholderColor:			#bababa;
 @ecdsToolbarBackgroundHover:	#999;
-@ecdsListboxHeader:				@primaryColor;
-@ecdsListboxHeaderBorder:		#3e83ab;
+@ecdsListboxHeader:				#f2f2f2;
+@ecdsListboxHeaderBorder:		#dbdbdb;
+@ecdsListboxHeaderFont:			#5F6061;
 @ecdsTabFontColor:				#686f7a;
 @ecdsListboxBackground:			#fbfbfb;
+@ecdsFrozenBody: 				#d8d8d8;
+@ecdsFrozenBorder:				#c4c4c4;
  
 @googleBlue:					#4885ed;
 @googleBlueDark1:				#4077d5;
 @googleBlueDark2:				#396abd;
 @googleGreen:					#3cba54;
-@ecdsSelectedColor:			   @googleBlue;
+@ecdsSelectedColor:			   @primaryColor;
 @buttonColor:				   @ecdsSelectedColor;
 @loadingFontSize:				14px;
 @ecdsToolbarFontColor:			#777d87;
@@ -218,8 +226,8 @@
 // Component independent variables
 // -------------------------------------
 // mask and loading
-@maskBackgroundColor:          #1f4154;
-@loadingBackgroundColor:       #E3E3E3;
+@maskBackgroundColor:          grey;
+@loadingBackgroundColor:       #1f4154;
 
 // scrollbar
 @scrollbarWidth:               16px;
@@ -301,9 +309,10 @@
 
 // window
 @windowBorderColor:            #CFCFCF;
-@windowBackgroundColor:        @ecdsLightBorderColor;
-@windowBackgroundColorDark1:   #ececec;
-@windowFontColor:			   #757575;
+@windowBackgroundColor:        @ecdsListboxHeader;
+@windowHeaderBorderColor:        @ecdsListboxHeaderBorder;
+@windowBackgroundColorDark1:   #438eb9;
+@windowFontColor:			   @ecdsListboxHeaderFont;
 @windowFramePadding:           0px;
 
 // tabbox

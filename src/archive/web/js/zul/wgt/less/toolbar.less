@@ -113,11 +113,13 @@
 	cursor: pointer;
 
 	&:hover { 
-		border-color: @hoverBorderColor; 
+		border-color: @ecdsToolbarBtnBackgroundColor;
+		background: @ecdsToolbarBtnBackgroundColor;
 	}
 	&:active {
-		border-color: @hoverBorderColor; 
-		.boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75), 0 0 7px #CFCFCF');
+		border-color: @ecdsToolbarBtnBackgroundColorActive; 
+		background: @ecdsToolbarBtnBackgroundColorActive; 
+		transition: background-color .5s ease, border .5s ease;
 	}
 	&[disabled] {
 		color: @disabledColor !important;

@@ -22,7 +22,7 @@
 			.leftBorderRadius(@baseBorderRadius);
 			padding-top: 0px;
 			float: none;
-			
+			 
 			&-selected {
 				border-bottom: 1px solid @baseBorderColor;
 				.boxShadow('1px 0px 0 #FFFFFF');
@@ -120,7 +120,6 @@
 		.iconFontStyle(@fontSizeMedium, @iconColor);
 		display: none;
 		border: 1px solid @baseBorderColor;
-		.topBorderRadius(@baseBorderRadius);
 		padding-top: 5px;
 		padding-bottom: 2px;
 		line-height: @baseButtonHeight;
@@ -238,6 +237,8 @@
 				border-width: 1px 1px 1px 0px;
 				.rightBorderRadius(@baseBorderRadius);
 				
+				 
+				
 				&.z-tab-selected {
 					.boxShadow('-1px 0px 0 #FFFFFF');
 					border-left: 0px;
@@ -341,7 +342,7 @@
 	display: block;
 	border: 1px solid @baseBorderColorLight;
 	border-width: 1px 1px 0px 1px;
-	.topBorderRadius(@baseBorderRadius);
+	//.topBorderRadius(@baseBorderRadius);
 	margin: 0;
 	padding-top: 1px;
 	line-height: @baseButtonHeight + 6;
@@ -350,6 +351,11 @@
 	position: relative;
 	cursor: pointer;
 	float: left; 
+	
+	&:hover {
+		border-top: 1px solid @ecdsListboxTabHoverDarker;
+		background-color:@ecdsListboxTabHover;
+	}
 
 	&-content {
 		display: block;
@@ -370,7 +376,7 @@
 
 	&-text { 
 		&:hover {  
-			color: @googleBlue; 
+			//color: @googleBlue; 
 		}
 		font-style: normal;
 		color: @ecdsTabFontColor;
@@ -415,8 +421,8 @@
 		border-top: 2px solid @ecdsSelectedColor;
 		.boxShadow('0 1px 0 #FFFFFF');
 		&:hover {
-			.resetGradient();
 			background: @tabSelectedBackgroundColor;
+			border-top: 2px solid @ecdsSelectedColor;
 		}
 		.z-tab-button {
 			.opacity(1);

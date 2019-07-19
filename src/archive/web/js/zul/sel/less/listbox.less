@@ -16,7 +16,7 @@
 
 //listbox
 .z-listbox {
-	//border-top: 1px solid @baseBorderColor;
+	//border-top: 1px solid @ecdsListboxHeaderBorder;
 	border-bottom: 1px solid @baseBorderColor;
 	overflow: hidden;
 	zoom: 1;
@@ -24,15 +24,16 @@
 	//listbox header
 	&-header {
 		width: 100%;
-		background: @ecdsWhiteColor;
+		background: @ecdsListboxHeader;
+		border-bottom: 1px solid @ecdsListboxHeaderBorder;
 		position: relative;
 		overflow: hidden;
 		.resetTable();
 	}
 	&-header-border {
-		border-bottom: 1px solid @meshTitleBorderColor;
-		margin-top: -1px;
-		position: relative;
+		//border-bottom: 1px solid @meshTitleBorderColor;
+		//margin-top: -1px;
+		//position: relative;
 	}
 	//listbox body
 	&-body {
@@ -50,19 +51,19 @@
 	}
 	//listbox footer
 	&-footer {
-		border-top: 1px solid @baseBorderColor;
+		//border-top: 1px solid @baseBorderColor;
 		overflow: hidden;
 		white-space: nowrap;
 		.resetTable();
 
 		.z-listfooter {
 			overflow: hidden;
-			background: @meshFootBackgroundColor;
+			background: @ecdsListboxBackground;
 		}
 	}
 
 	.z-listcell {
-		background: @meshBackgroundColor;
+		background: @ecdsListcellBackground;
 	}
 
 	 
@@ -71,6 +72,8 @@
 		background: transparent no-repeat center;
 		.encodeThemeURL(background-image, '~./zul/img/misc/progress.gif');
 	}
+	
+	
 }
 //listhead
 .z-listhead {
@@ -81,12 +84,13 @@
 	}
 	&-bar {
 		background: @ecdsListboxHeader;
+		//border-bottom: 1px solid @ecdsListboxHeaderBorder;
 	}
 }
 
 .z-listheader {
 	border-right: 1px solid @ecdsListboxHeaderBorder;
-	border-bottom: 1px solid @ecdsListboxHeaderBorder;
+	//border-bottom: 1px solid @ecdsListboxHeaderBorder;
 	padding: 0;
 	background: @ecdsListboxHeader;
 	background-clip: padding-box;
@@ -170,6 +174,7 @@
 		position: relative;
 		z-index: 0;
 	}
+	/*
 	&:hover {
 		> .z-listcell {
 			background: @meshContentHoverStart;
@@ -182,6 +187,7 @@
 			}
 		}
 	}
+	*/
 	//check mark
 	&-checkable {
 		.displaySize(inline-block, @baseIconWidth, @baseIconHeight);
@@ -357,13 +363,13 @@ body:not(.gecko) {
 .z-listgroupfoot-content,
 .z-listfooter-content {
 	.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @textColorGrayLight);
-	padding: 4px 5px;
+	padding: 0px 5px;
 	line-height: @baseButtonHeight;
 	overflow: hidden;
 }
 .z-listheader-content {
-	.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @ecdsWhiteColor); 
-	padding: 4px 5px 3px;
+	.fontStyle(@baseContentFontFamily, @fontSizeMedium, bold, @ecdsListboxHeaderFont); 
+	padding: 2px 5px 1px;
 	position: relative;
 }
 .z-listgroup-content,
