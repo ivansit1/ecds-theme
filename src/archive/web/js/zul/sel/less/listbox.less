@@ -25,7 +25,7 @@
 	&-header {
 		width: 100%;
 		background: @ecdsListboxHeader;
-		border-bottom: 1px solid @ecdsListboxHeaderBorder;
+		//border-bottom: 1px solid @ecdsListboxHeaderBorder;
 		position: relative;
 		overflow: hidden;
 		.resetTable();
@@ -84,13 +84,13 @@
 	}
 	&-bar {
 		background: @ecdsListboxHeader;
-		//border-bottom: 1px solid @ecdsListboxHeaderBorder;
+		border-bottom: 1px solid @ecdsListboxHeaderBorder;
 	}
 }
 
 .z-listheader {
 	border-right: 1px solid @ecdsListboxHeaderBorder;
-	//border-bottom: 1px solid @ecdsListboxHeaderBorder;
+	border-bottom: 1px solid @ecdsListboxHeaderBorder;
 	padding: 0;
 	background: @ecdsListboxHeader;
 	background-clip: padding-box;
@@ -214,7 +214,12 @@
 			border-bottom:1px solid @ecdsHighlightColorDark1;
 			> .z-listcell-content {
 				color: @selectedColor !important;;
+				> i , .z-textbox-inplace, .z-decimalbox-inplace, .z-intbox-inplace, .z-longbox-inplace, .z-doublebox-inplace, .z-bandbox-inplace {
+					color: @selectedColor !important;;
+				}		
 			}
+			
+			 
 		}
 		&:hover {
 			> .z-listcell { 

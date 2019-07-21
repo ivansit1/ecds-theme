@@ -3,27 +3,30 @@
 // ------------------------------------
 // ECDS
 // ------------------------------------
-@ecdsListcellBackground:		#FFFFD0;
+@primaryColor:   				#357194; 
+@labelColor:					#5f6061;
+@primaryColorDarker:			#004666;
+@ecdsListcellBackground:		#fafafa;
 @ecdsListboxTabHover:			#F9F9F9;
 @ecdsListboxTabHoverDarker:		#bbbbbb;
-@ecdsToolbarBtnBackgroundColor:  #E6F0F5;
-@ecdsToolbarBtnBackgroundColorActive:  #dceaf2;
+@ecdsToolbarBtnBackgroundColor: #e6f0f6;
+@ecdsToolbarBtnBackgroundColorActive:  #bbd6e6;
 @ecdsLightBorderColor:			#e8e8e8;
-@ecdsListboxHighlistColor:		#E6F0F5;
-@ecdsListboxBorderHighlistColor:#dceaf2;
+@ecdsListboxHighlistColor:		#e6f0f6;
+@ecdsListboxBorderHighlistColor:#bbd6e6;
 @ecdsListboxLightBorderColor:	#ebeced;
-@ecdsHighlightColor:			yellow;
-@ecdsHighlightColorDark1:		#e5e500;
+@ecdsHighlightColor:			@primaryColor;
+@ecdsHighlightColorDark1:		@primaryColorDarker;
 @inputBorderRadius:             @baseBorderRadius;
 @checkboxHoverBorderColor:      @primaryColor;
 @inputDisableColor:  			white;
 @inputDisableBackgroundColor:   @iconDisabledColor; 
-@primaryColor:   				#438EB9; 
+ 
 @secondaryColor:				#636363;
-@ecdsBlackColor:				#2d2b2b;
+@ecdsBlackColor:				black;
 @ecdsWhiteColor:				white;
-@ecdsButtonHover:				#4077d5;
-@ecdsButtonActive:				#396abd;
+@ecdsButtonHover:				@primaryColorDarker;
+@ecdsButtonActive:				@primaryColorDarker;
 @ecdsMenuColor:					#555;
 @ecdsMenuBackgroundColor:		#F5F5F5;
 @ecdsMenuHoverColor:			@ecdsWhiteColor;
@@ -45,7 +48,7 @@
 @googleBlue:					#4885ed;
 @googleBlueDark1:				#4077d5;
 @googleBlueDark2:				#396abd;
-@googleGreen:					#3cba54;
+@googleGreen:					#2e7d32;
 @ecdsSelectedColor:			   @primaryColor;
 @buttonColor:				   @ecdsSelectedColor;
 @loadingFontSize:				14px;
@@ -191,21 +194,21 @@
 @readonlyBackgroundColor:      #FAFAFA;
 
 // Selected (used on listbox, tree, comboitem)
-@selectedColor:                @baseTextColor;
+@selectedColor:                white;
 @selectedBorderColor:          @ecdsHighlightColor;
 @selectedBackgroundColor:      @ecdsHighlightColor;
 @selectedGradientStart:        @ecdsHighlightColor;
 @selectedGradientEnd:          @ecdsHighlightColor;
 
 // Selected Hover (used on listbox, tree, comboitem)
-@selectedHoverColor:           @baseTextColor;
+@selectedHoverColor:           @selectedColor;
 @selectedHoverBorderColor:     @ecdsHighlightColor;
 @selectedHoverBackgroundColor: @ecdsHighlightColor;
 @selectedHoverGradientStart:   @ecdsHighlightColor;
 @selectedHoverGradientEnd:     @ecdsHighlightColor;
 
 // Selected Focus (used on listbox, tree, comboitem)
-@selectedFocusColor:           @baseTextColor;
+@selectedFocusColor:           @selectedColor;
 @selectedFocusBorderColor:     @ecdsHighlightColor;
 @selectedFocusBackgroundColor: @ecdsHighlightColor;
 @selectedFocusGradientStart:   @ecdsHighlightColor;
@@ -311,7 +314,7 @@
 @windowBorderColor:            #CFCFCF;
 @windowBackgroundColor:        @ecdsListboxHeader;
 @windowHeaderBorderColor:        @ecdsListboxHeaderBorder;
-@windowBackgroundColorDark1:   #438eb9;
+@windowBackgroundColorDark1:   @primaryColor;
 @windowFontColor:			   @ecdsListboxHeaderFont;
 @windowFramePadding:           0px;
 
