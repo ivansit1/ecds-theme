@@ -358,11 +358,12 @@ input[type="checkbox"] {
 }
 .z-loading-indicator,
 .z-apply-loading-indicator {
-	color: @ecdsWhiteColor; 
-	background: @loadingBackgroundColor;
-	opacity:0.8;
+	color: @loadingBackgroundColor; 
+	background: transparent;
+	opacity:1;
 	margin: 5px;
 	white-space: nowrap;
+	font-weight:bold; 
 	//.setDarkShadow();
 }
 .z-loading-indicator {
@@ -378,9 +379,9 @@ input[type="checkbox"] {
 .z-loading-icon,
 .z-renderdefer {
 	 margin-right: 4px;
-	 border: 3px solid @googleBlue;
+	 border: 2px solid @loadingBackgroundColor;
 	 border-radius: 50%;
-	 border-top: 3px solid @baseBackgroundColor;
+	 border-top: 2px solid @baseBackgroundColor;
 	 width: 16px;
 	 height: 16px;
 	 -webkit-animation: spin 1.5s linear infinite; /* Safari */
@@ -934,6 +935,7 @@ body{
 	.grid-remove-border div.z-grid {
   border: none; 
 }
+
 @keyframes loadingbar {
 		0% {
 		    -webkit-transform: translateX(-100%);
@@ -967,4 +969,6 @@ overflow-x: hidden;
 	overflow: hidden;
 	will-change: opacity,transform;
 	height: .2rem;
+	position: fixed;
+	top: 0px;
 }  
